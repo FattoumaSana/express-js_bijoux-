@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <main>
+        <section class="hero">
+            <h1>Fattouma Co</h1>
+            <p>Créez votre bijou unique avec des angles graphiques et des lignes pures qui se combinent pour créer la beauté pure de la collection.</p>
+            <a href="/collections" class="cta-button">Découvrir nos collections</a>
+        </section>
+
+        <!-- Section des Produits -->
+        <section class="section product-section">
+            <div class="container">
+                <h2 class="title has-text-centered">Nos Produits</h2>
+                <div class="columns is-multiline">
+                    <!-- Produit 1 -->
+                    <div class="column is-one-quarter">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="/images/Produits/IMG_1.webp" alt="Collier Muse plaqué or" class="default-image">
+                                    <img src="/images/Produits/IMG_1-2.webp" alt="Collier Muse plaqué or" class="hover-image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <p class="title is-4">Collier "Muse" plaqué or</p>
+                                <p class="subtitle is-6">À partir de 42,00€</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produit 2 -->
+                    <div class="column is-one-quarter">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="/images/Produits/IMG_2.webp" alt="Bracelet Mia plaqué or" class="default-image">
+                                    <img src="/images/Produits/IMG_2-2.webp" alt="Bracelet Mia plaqué or" class="hover-image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <p class="title is-4">Bracelet "Mia" plaqué or</p>
+                                <p class="subtitle is-6">À partir de 35,00€</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produit 3 -->
+                    <div class="column is-one-quarter">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="/images/Produits/IMG_3.webp" alt="Collier Initial plaqué or" class="default-image">
+                                    <img src="/images/Produits/IMG_3-2.webp" alt="Collier Initial plaqué or" class="hover-image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <p class="title is-4">Collier "Initial" plaqué or</p>
+                                <p class="subtitle is-6">À partir de 36,00€</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produit 4 -->
+                    <div class="column is-one-quarter">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="/images/Produits/IMG_4.webp" alt="Bracelet Initial plaqué or" class="default-image">
+                                    <img src="/images/Produits/IMG_4-2.webp" alt="Bracelet Initial plaqué or" class="hover-image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <p class="title is-4">Bracelet "Initial" plaqué or</p>
+                                <p class="subtitle is-6">À partir de 29,00€</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ligne 2 -->
+                <div class="columns is-multiline">
+                    <!-- Produit 5 -->
+                    <div class="column is-one-quarter">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="/images/Produits/IMG_5.webp" alt="Collier Yeée argent" class="default-image">
+                                    <img src="/images/Produits/IMG_5-2.webp" alt="Collier Yeée argent" class="hover-image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <p class="title is-4">Collier "Yeée" argent</p>
+                                <p class="subtitle is-6">À partir de 40,00€</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produit 6 -->
+                    <div class="column is-one-quarter">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="/images/Produits/IMG_6.webp" alt="Collier Alpha plaqué or" class="default-image">
+                                    <img src="/images/Produits/IMG_6-2.webp" alt="Collier Alpha plaqué or" class="hover-image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <p class="title is-4">Collier "Alpha" plaqué or</p>
+                                <p class="subtitle is-6">À partir de 42,00€</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produit 7 -->
+                    <div class="column is-one-quarter">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="/images/Produits/IMG_7-2.webp" alt="Mini Pendentif Muse plaqué or" class="default-image">
+                                    <img src="/images/Produits/IMG_7.webp" alt="Mini Pendentif Muse plaqué or" class="hover-image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <p class="title is-4">Mini Pendentif "Muse" plaqué or</p>
+                                <p class="subtitle is-6">16,00€</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produit 8 -->
+                    <div class="column is-one-quarter">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="/images/Produits/IMG_8.webp" alt="Bracelet Idylle astro plaqué or" class="default-image">
+                                    <img src="/images/Produits/IMG_8-2.webp" alt="Bracelet Idylle astro plaqué or" class="hover-image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <p class="title is-4">Bracelet "Idylle" astro plaqué or</p>
+                                <p class="subtitle is-6">À partir de 29,00€</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section Offres Spéciales -->
+<section class="section promotions-section">
+    <div class="container">
+        <h2 class="title has-text-centered">Offres Spéciales</h2>
+        <p class="subtitle has-text-centered">Profitez de nos offres exclusives pour un temps limité !</p>
+        <div class="columns is-multiline is-centered">
+            <!-- Offre 1 -->
+            <div class="column is-one-third">
+                <div class="card is-centered">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="/images/20.png" alt="Réduction de 20% sur les colliers">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <p class="title is-4">Réduction de 20%</p>
+                        <p class="subtitle is-6">Sur tous les colliers de la collection "Élégance".</p>
+                        <a href="#" class="button is-primary">Voir l'offre</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Offre 2 -->
+            <div class="column is-one-third">
+                <div class="card is-centered">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="/images/gratuit.png" alt="Cadeau gratuit">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <p class="title is-4">Cadeau Gratuit</p>
+                        <p class="subtitle is-6">Pour tout achat supérieur à 100€.</p>
+                        <a href="#" class="button is-primary">Voir l'offre</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Offre 3 -->
+            <div class="column is-one-third">
+                <div class="card is-centered">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="/images/30.png" alt="Bracelets à prix réduits">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <p class="title is-4">Bracelets à -30%</p>
+                        <p class="subtitle is-6">Profitez de nos bracelets à prix réduits.</p>
+                        <a href="#" class="button is-primary">Voir l'offre</a>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</section>
+<section class="section contact-section">
+    <div class="container">
+        <h2 class="title has-text-centered">Contactez-nous</h2>
+        <p class="subtitle has-text-centered">Nous sommes à votre écoute pour toute question ou demande.</p>
+        <div class="columns">
+            <!-- Formulaire de Contact -->
+            <div class="column is-half">
+                <div class="form-container">
+                    <form action="/contact" method="POST">
+                        <div class="field">
+                            <label class="label">
+                                <span class="icon"><i class="fas fa-user"></i></span>
+                                Nom
+                            </label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="Votre nom" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">
+                                <span class="icon"><i class="fas fa-envelope"></i></span>
+                                Email
+                            </label>
+                            <div class="control">
+                                <input class="input" type="email" placeholder="Votre email" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">
+                                <span class="icon"><i class="fas fa-comment"></i></span>
+                                Message
+                            </label>
+                            <div class="control">
+                                <textarea class="textarea" placeholder="Votre message" required></textarea>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <button type="submit" class="button is-primary">
+                                    <span class="icon"><i class="fas fa-paper-plane"></i></span>
+                                    <span>Envoyer</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Informations de Contact -->
+            <div class="column is-half">
+                <div class="contact-info">
+                    <p class="subtitle">Ou contactez-nous directement :</p>
+                    <div class="info-item">
+                        <span class="icon"><i class="fas fa-envelope"></i></span>
+                        <p><strong>Email :</strong> contact@fattouma-co.com</p>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon"><i class="fas fa-phone"></i></span>
+                        <p><strong>Téléphone :</strong> +33 1 23 45 67 89</p>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                        <p><strong>Adresse :</strong> 123 Rue de la Bijouterie, Paris, France</p>
+                    </div>
+                            <!-- Carte Google Maps -->
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.991440608209!2d2.292292615674389!3d48.85837360866186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1633456789012!5m2!1sfr!2sfr"
+                width="100%"
+                height="250"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <%- include('partials/footer') %>   
+    
+    <!-- Étoiles filantes -->
+    <div class="shooting-star large" style="top: 10%; left: 20%; animation-delay: 0s;"></div>
+    <div class="shooting-star small" style="top: 30%; left: 50%; animation-delay: 1s;"></div>
+    <div class="shooting-star" style="top: 50%; left: 80%; animation-delay: 2s;"></div>
+    <div class="shooting-star large" style="top: 70%; left: 10%; animation-delay: 3s;"></div>
+    <div class="shooting-star small" style="top: 90%; left: 40%; animation-delay: 4s;"></div>
+    <div class="shooting-star" style="top: 20%; left: 90%; animation-delay: 5s;"></div>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

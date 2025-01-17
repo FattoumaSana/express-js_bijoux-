@@ -1,0 +1,701 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Polices */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap');
+@import 'bulma/css/bulma.min.css';
+
+/* Variables CSS pour le light mode */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --navbar-background: #1a1a1a;
+    --footer-background: #1a1a1a;
+    --primary-color: #d4af37; /* Or */
+    --card-background: #ffffff;
+    --card-text-color: #333333;
+    --button-hover-color: #b2962e; /* Or foncé */
+}
+
+/* Variables CSS pour le dark mode */
+[data-theme="dark"] {
+    --background-color: #1a1a1a;
+    --text-color: #ffffff;
+    --navbar-background: #2a2a40;
+    --footer-background: #2a2a40;
+    --primary-color: #b2962e; /* Or foncé */
+    --card-background: #2a2a40;
+    --card-text-color: #ffffff;
+    --button-hover-color: #d4af37; /* Or */
+}
+
+/* Appliquer les variables CSS */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-color);
+}
+
+/* En-tête */
+header {
+    background: linear-gradient(135deg, #1a1a1a, #2a2a40); /* Fond noir avec dégradé */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header nav a {
+    color: #ffffff; /* Texte blanc */
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+header nav a:hover {
+    color: #d4af37; /* Texte or au survol */
+    text-shadow: 0 0 10px #d4af37; /* Effet de lumière dorée */
+}
+
+/* Section Hero */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('/images/hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Pleine hauteur de l'écran */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)); /* Overlay avec dégradé */
+}
+
+.hero h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    color: var(--primary-color); /* Titre en or */
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5); /* Ombre dorée */
+    animation: fadeInDown 1s ease-in-out, blink 2s infinite; /* Combine les animations */
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    animation: fadeInUp 1s ease-in-out; /* Animation du sous-titre */
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 1.5s ease-in-out; /* Animation du bouton */
+}
+
+.cta-button:hover {
+    background-color: var(--button-hover-color);
+    transform: translateY(-5px); /* Effet de levée */
+    box-shadow: 0 8px 16px rgba(212, 175, 55, 0.3); /* Ombre dorée */
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Section des collections */
+.collections {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.collection-item {
+    background: var(--card-background);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.collection-item:hover {
+    transform: translateY(-10px);
+}
+
+.collection-item h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--card-text-color);
+}
+
+.collection-item p {
+    font-size: 1em;
+    color: var(--card-text-color);
+}
+
+/* Formulaire de personnalisation */
+#customize-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    background: var(--card-background);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#customize-form label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--card-text-color);
+}
+
+#customize-form select, #customize-form input, #customize-form button {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+}
+
+#customize-form button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#customize-form button:hover {
+    background-color: var(--button-hover-color);
+}
+
+#preview {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Page panier */
+.cart {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--card-background);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cart h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cart ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cart li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart li:last-child {
+    border-bottom: none;
+}
+
+.cart .button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Pied de page */
+footer {
+    background-color: var(--footer-background);
+    padding: 10px 20px;
+    text-align: center;
+    color: var(--text-color);
+    margin-top: 40px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Styles pour les icônes */
+.icon {
+    margin-right: 5px;
+}
+
+/* Bouton musique */
+#music-toggle {
+    margin-right: 10px;
+}
+
+/* Bouton dark mode */
+#theme-toggle {
+    margin-right: 10px;
+}
+
+/* Barre de volume */
+#volume-slider {
+    margin-left: 10px;
+    width: 100px;
+    cursor: pointer;
+}
+#volume-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100px;
+    height: 6px;
+    background: linear-gradient(90deg, var(--primary-color), #b2962e); /* Dégradé doré */
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    margin-left: 10px;
+    cursor: pointer;
+    border: 1px solid rgba(212, 175, 55, 0.3); /* Bordure fine */
+}
+
+#volume-slider:hover {
+    opacity: 1;
+}
+
+#volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+    border: 2px solid #fff; /* Bordure blanche pour un effet sophistiqué */
+}
+
+#volume-slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+    border: 2px solid #fff; /* Bordure blanche pour un effet sophistiqué */
+}
+/* Bouton primaire */
+.button.is-primary {
+    background-color: var(--primary-color); /* Or */
+    border-color: transparent;
+    color: var(--text-color); /* Texte noir ou blanc selon le mode */
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button.is-primary:hover {
+    background-color: var(--button-hover-color); /* Or foncé */
+    transform: translateY(-2px); /* Effet de levée */
+    box-shadow: 0 4px 8px rgba(212, 175, 55, 0.3); /* Ombre dorée */
+}
+
+/* Bouton secondaire  */
+.button.is-secondary {
+    background-color: transparent;
+    border: 2px solid var(--primary-color); /* Bordure dorée */
+    color: var(--primary-color); /* Texte doré */
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button.is-secondary:hover {
+    background-color: var(--primary-color); /* Fond doré */
+    color: var(--text-color); /* Texte noir ou blanc */
+}
+/* Animation de clignotement */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+        text-shadow: 0 0 10px rgba(212, 175, 55, 0.8), 0 0 20px rgba(212, 175, 55, 0.6);
+    }
+    50% {
+        opacity: 0.7;
+        text-shadow: 0 0 5px rgba(212, 175, 55, 0.5), 0 0 10px rgba(212, 175, 55, 0.3);
+    }
+}
+/*annimation produit */
+.card {
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image img {
+    transition: opacity 0.3s ease;
+    width: 100%;
+    height: auto;
+}
+
+.card-image img.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .card-image img.default-image {
+    opacity: 0;
+}
+
+.card:hover .card-image img.hover-image {
+    opacity: 1;
+}
+/* Section Offres Spéciales */
+.promotions-section {
+    background-color: #f9f9f9;
+    padding: 3rem 0;
+}
+
+.promotions-section .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.promotions-section .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Contact */
+.contact-section {
+    padding: 3rem 0;
+    background: linear-gradient(5deg, rgba(26, 26, 26, 0.9), rgba(61, 61, 85, 0.9)), url('/images/contact-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--text-color);
+}
+
+.contact-section .form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--card-background);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-section .field {
+    margin-bottom: 1.5rem;
+}
+
+.contact-section .label {
+    color: var(--text-color);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.contact-section .input,
+.contact-section .textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    background: var(--card-background);
+    color: var(--text-color);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-section .input:focus,
+.contact-section .textarea:focus {
+    border-color: var(--button-hover-color);
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
+    outline: none;
+}
+
+.contact-section .button.is-primary {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-section .button.is-primary:hover {
+    background-color: var(--button-hover-color);
+    transform: translateY(-2px);
+}
+
+.contact-section .title,
+.contact-section .subtitle {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.contact-section .subtitle {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.contact-section .content {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.contact-section .content p {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+/* Section Informations de Contact */
+.contact-info {
+    background: var(--card-background);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.contact-info .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info .info-item .icon {
+    margin-right: 1rem;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.contact-info .info-item p {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.contact-info .info-item p strong {
+    color: var(--primary-color);
+}
+/* Conteneur de la carte */
+.map-container {
+    margin-top: 1.5rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+    height: 264px;
+    border: none;
+}
+
+/* Section Offres Spéciales */
+.promotions-section {
+    background-color: var(--background-color);
+    padding: 3rem 0;
+}
+
+.promotions-section .card {
+    background-color: var(--card-background);
+    color: var(--card-text-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.promotions-section .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.promotions-section .title,
+.promotions-section .subtitle {
+    color: var(--text-color);
+}
+
+.promotions-section .button.is-primary {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border-color: transparent;
+}
+
+.promotions-section .button.is-primary:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* Section Contact */
+.contact-section {
+    background-color: var(--background-color);
+    padding: 3rem 0;
+}
+
+.contact-section .title,
+.contact-section .subtitle {
+    color: var(--text-color);
+}
+
+.contact-section .textarea {
+    min-height: 150px;
+    background-color: var(--card-background);
+    color: var(--card-text-color);
+    border-color: var(--primary-color);
+}
+
+.contact-section .input {
+    background-color: var(--card-background);
+    color: var(--card-text-color);
+    border-color: var(--primary-color);
+}
+
+.contact-section .button.is-primary {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border-color: transparent;
+}
+
+.contact-section .button.is-primary:hover {
+    background-color: var(--button-hover-color);
+}
+
+.contact-section .content p {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+/* Effet d'étoiles clignotantes dorées */
+[data-theme="dark"] body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+    animation: twinkle 5s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        box-shadow: 
+            100px 200px 8px 0px rgba(212, 175, 55, 0.8),
+            300px 400px 8px 0px rgba(212, 175, 55, 0.8),
+            500px 600px 8px 0px rgba(212, 175, 55, 0.8),
+            700px 800px 8px 0px rgba(212, 175, 55, 0.8),
+            900px 1000px 8px 0px rgba(212, 175, 55, 0.8);
+    }
+    50% {
+        box-shadow: 
+            100px 200px 8px 0px rgba(212, 175, 55, 0.3),
+            300px 400px 8px 0px rgba(212, 175, 55, 0.3),
+            500px 600px 8px 0px rgba(212, 175, 55, 0.3),
+            700px 800px 8px 0px rgba(212, 175, 55, 0.3),
+            900px 1000px 8px 0px rgba(212, 175, 55, 0.3);
+    }
+}
+
+/* Étoiles filantes */
+[data-theme="dark"] .shooting-star {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 3px; /* Taille augmentée à 3px */
+    height: 3px; /* Taille augmentée à 3px */
+    background: rgba(212, 175, 55, 0.8);
+    border-radius: 50%;
+    animation: shootingStar 3s linear infinite;
+}
+
+@keyframes shootingStar {
+    0% {
+        transform: translateX(0) translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100vw) translateY(100vh);
+        opacity: 0;
+    }
+}

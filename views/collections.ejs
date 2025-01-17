@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <main>
+        <section class="hero">
+            <h1>Nos collections</h1>
+            <p>Découvrez nos magnifiques collections de bijoux uniques.</p>
+            <div class="collections">
+                <div class="collection-item">
+                    <h2>Collection Élégance</h2>
+                    <p>Des bijoux raffinés pour les occasions spéciales.</p>
+                </div>
+                <div class="collection-item">
+                    <h2>Collection Moderne</h2>
+                    <p>Des designs contemporains pour un style audacieux.</p>
+                </div>
+                <div class="collection-item">
+                    <h2>Collection Classique</h2>
+                    <p>Des pièces intemporelles pour toutes les générations.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <%- include('partials/footer') %>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
